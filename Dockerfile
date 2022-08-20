@@ -4,7 +4,6 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page269/bo
 WORKDIR /var/www/html
 RUN unzip bonativo.zip
 RUN rm -rf bonativo.zip &&\
-    cp -rf bonativo/* . &&\
-    rm -rf bonativo
+    cp -rf bonativo/* .
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
